@@ -1,6 +1,6 @@
 ---
-title: "Reproducibility Report for Study X by Sample & Sample (20xx, Psychological Science)"
-author: "Reproducibility Project Author[s] (contact information)"
+title: "Reproducibility Report for 'Reinforcement learning and Bayesian inference provide complementary models for the unique advantage of adolescents in stochastic reversal' by Eckstein et al. (2022, Developmental Cognitive Neuroscience)"
+author: "Reproducibility Project: Victor Moreno (vamoreno@stanford.edu)"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 format:
   html:
@@ -12,23 +12,27 @@ format:
 
 ## Introduction
 
-[No abstract is needed.]  Each reproducibility project will have a straightforward, no frills report of the study and reproducibility results. These reports will be publicly available as supplementary material for the aggregate report(s) of the project as a whole.  Also, to maximize project integrity, the intro and methods will be written and critiqued in advance of your attempt to reproduce the results. Introductions can be just 1-2 paragraphs clarifying the main idea of the original study, the target finding for your reproducibility attempt, and any other essential information.  It will NOT have a literature review -- that is in the original publication. You can write both the introduction and the methods in past tense.  
+In “Reinforcement Learning and Bayesian Inference”, Eckstein et al. investigated the relationship between performance on a volatile reversal-learning task and age, predicting that adolescents would out-perform both younger and older participants. Indeed, this hypothesis aligned with data collected from 291 participants with ages spanning from 8-30 years. The researchers then built several candidate Reinforcement Learning (RL) and Bayesian Inference (BI) models to investigate the cognitive processes potentially producing this pattern. The models which produced simulated behavior most closely aligned with participants’ included a 4-parameter RL model (𝛽: inverse decision temperature, α+: factual learning rate, α- counter-factual learning rate, and 𝑝: persistence) as well as a 4-parameter BI model (𝛽, 𝑝, 𝑝switch: task volatility, and 𝑝reward: reward stochasticity). Analyzing these models’ parameters with respect to age revealed 𝛽 and 𝑝 increased with age. Interestingly however, the winning RL model’s α- parameter, as well as the winning BI model’s 𝑝switch parameter, were lowest mid-adolescents. This result suggests mid-adolescents’ strong performance in the researchers’ volatile reversal-learning task may be related to a difference in the rate they incorporate negative feedback. 
 
-**Clarify key analysis of interest here**  You can also pre-specify additional analyses you plan to do.
+**Key analysis of interest: Reproduce the 4-parameter RL and BI models and evaluate parameters’ relationships with age.**  
 
 ### Justification for choice of study
 
-Please describe why you chose to reproduce the results of this study.
+My research interests include cognitive modeling and decision making; I have had limited opportunities to explore this interest outside of lectures and am excited by the opportunity to do so with this computational reproducibility project. I also feel reproducing the RL and BI models from the original paper would be an excellent way to strengthen my computational skills and gain exposure to developmental cognitive science literature. 
 
 ### Anticipated challenges
 
-Do you anticipate running into any challenges when attempting to reproduce these result(s)? If so please, list them here.
+To conduct this experiment, an important first step will be to simulate the volatile reversal-learning task (this step has been completed). Next, candidate RL and BI models will be built and used to simulate agents’ behavior. Before fitting the models to the original data, I will engage in parameter recovery, model recovery, and finally, model comparison. Next I will investigate 1) whether my winning models align with those identified in the original paper and 2) the extent to which my winning models exhibit similar behaviors to those in the original paper. For example, after fitting my models to the original data, I will examine the relationship between participants’ recovered parameters and age. 
+
+
+Potential challenges include 1) building the BI model (I am less experienced with BI than RL though am eager to improve!) and 2) reproducing the final piece of the original analysis (section “2.4. Integrating RL and BI—Going beyond specific models”). 
 
 ### Links
 
-Project repository (on Github): 
+Project repository (on Github): https://github.com/vic-moreno/eckstein2022 
 
-Original paper (as hosted in your repo): 
+Original paper (as hosted in your repo): https://github.com/vic-moreno/eckstein2022/blob/main/original_paper/eckstein2022.pdf 
+
 
 ## Methods
 
